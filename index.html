@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>space - intertain.org - teaching the world through play</title>
+<link rel="icon" href="icon.png" type="image/png" />
+<link rel="stylesheet" type="text/css" href="css/html5reset.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.13.custom.css" type="text/css">
+<title>Solar System</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/excanvas.compiled.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/SolarSystem.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		alert("Mousewheel: Zoom In/Out\nLeft-click: Center view on object\nUI Slider: Time Forward/Backward");
+
+		kGridX = $("body").width();
+		kGridY = $("body").height();
+		kCentX = kGridX/2;
+		kCentY = kGridY/2;
+		
+		initSolarSystem(null);
+
+		//TODO On window resize, update grid size and drawScene
+		$('#SolarSystem').bind('mousewheel', function(event, delta) {
+			mainView.zoom(delta);
+		});
+		$('#SolarSystem').bind('click', function(event) {
+			mainView.click(event);
+		});
+		
+		$("#time").slider({
+			value:0,
+			min:-48,
+			max:48,
+			step:3
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="debug"></div>
+	<div id="SolarSystem"></div>
+	<div id="controlPanel">
+		<p>-&nbsp;&nbsp;Time&nbsp;&nbsp;+</p>
+		<div id="time"></div>
+	</div>
+</body>
+</html>

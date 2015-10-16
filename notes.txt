@@ -1,0 +1,40 @@
+Space website
+
+libraries
+	box2d
+
+Story?
+2D world for now
+	Our solar system
+The page is like being in a spaceship
+	How the UI of a space ship would work
+		Views
+			System
+				Rollover zoom
+				Labels
+			Navigation
+			Radio
+			Sequence of Events (SOE)
+			Clock
+Set in space
+	Our solar system
+Fun
+Easy to learn, difficult to master
+Multiple players?
+Ability to speed up or slow down time
+Pages are accessible once they are in radio range
+	radio communications disrupted by solar bodies (sun)
+	light minutes
+As time goes on, increase technology of space craft?
+Asteroid Belt
+	Eros and other large asteroids
+	Kuiper Belt
+	Haley's Comet
+	Oort Cloud?
+Manuevers
+	Gravity Assist trajectories
+	Aerobraking
+Newtonian Physics vs Einsteinian Physics
+Dangerous bands around Earth and Jupiter
+Start time - 00:00 01/01/2015
+Launch window
